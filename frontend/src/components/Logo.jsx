@@ -5,7 +5,6 @@ const Logo = () => {
   return (
     <div>
       <Link to='/'><img src="logo.png" alt="logo" className='w-15' /></Link>
-      
     </div>
   )
 }

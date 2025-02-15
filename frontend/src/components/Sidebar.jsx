@@ -2,6 +2,7 @@ import React from 'react'
 import Appnav from './Appnav'
 import Logo from './Logo'
 import { Outlet } from 'react-router'
+import CitiesList from '../pages/CitiesList'
 
 const Sidebar = () => {
     return (
