@@ -3,8 +3,6 @@ import CountryLi from '../components/CountryLi'
 
 
 
-
-
 const CitiesList = ({cities,isLoading}) => {
 
 if(isLoading){

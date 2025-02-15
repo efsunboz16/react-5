@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { BrowserRouter, Routes, Route, Navigate, Form } from "react-router";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
@@ -8,6 +8,8 @@ import Applayout from "./pages/Applayout";
 import { useEffect, useState } from "react";
 import CitiesList from "./pages/CitiesList";
 import CountryList from "./pages/CountryList";
+import City from "./components/City";
+import Forum from "./pages/Form";
 
 
 const  API_URL = 'http://localhost:5000'
@@ -44,8 +46,9 @@ useEffect(function(){
           <Route path='/app' element={<Applayout />} >
           <Route index element={<Navigate to="cities" replace />} />
             <Route path='cities' element={<CitiesList cities={cities} isloading={isloading} />} />
+            <Route path='cities/:id' element={<City />} />
             <Route path='countries' element={<CountryList cities={cities} isloading={isloading} />} />
-            <Route path='form' element={<div>form</div>} />
+            <Route path='form' element={<Forum/>} />
           </Route>
           <Route path="*" element={<Nootfound />} />
         </Routes>
